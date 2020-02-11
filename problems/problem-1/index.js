@@ -8,14 +8,12 @@ const getMultiples = (multipleNumber, multipleMax) => {
   return list;
 };
 
-// get lists of multiples
-const fives = getMultiples(5, 1000);
-const threes = getMultiples(3, 1000);
-
 // combine and sort them
-const combined = [...fives, ...threes].sort(function(a, b) {
-  return a - b;
-});
+const combined = [...getMultiples(5, 1000), ...getMultiples(3, 1000)].sort(
+  function(a, b) {
+    return a - b;
+  }
+);
 
 // remove duplicates
 const filterList = combined =>
